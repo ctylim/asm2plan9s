@@ -78,7 +78,7 @@ func asSingle(instr string, lineno, commentPos int, inDefine bool) (string, []by
 	// as -march=armv8-a+crypto -o first.out -al=first.lis first.s
 	app := "as"
 
-	arg0 := "-march=armv8-a+sve" // See https://gcc.gnu.org/onlinedocs/gcc-4.9.1/gcc/ARM-Options.html
+	arg0 := "-march=armv8.2-a+sve" // See https://gcc.gnu.org/onlinedocs/gcc-4.9.1/gcc/ARM-Options.html
 	arg1 := "-o"
 	arg2 := objFile
 	arg3 := fmt.Sprintf("-al=%s", lisFile)
