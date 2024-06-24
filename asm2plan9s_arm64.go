@@ -85,6 +85,7 @@ func asSingle(instr string, lineno, commentPos int, inDefine bool) (string, []by
 	arg4 := asmFile
 
 	cmd := exec.Command(app, arg0, arg1, arg2, arg3, arg4)
+	fmt.Printf("cmd: %v\n", cmd)
 	cmb, err := cmd.CombinedOutput()
 	if err != nil {
 		asmErrs := strings.Split(string(cmb)[len(asmFile)+1:], ":")
